@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariapia & Augusto · 10 Ottobre 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-monogram">M & A</div>
+  <ul>
+    <li><a href="#dettagli">Dettagli</a></li>
+    <li><a href="#regalo">Regalo</a></li>
+    <li><a href="#rsvp">RSVP</a></li>
+    <li><a href="#foto">Foto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <p class="hero-label">Con gioia vi annunciano</p>
+  <h1 class="hero-names">Mariapia<br><span>&</span> Augusto</h1>
+  <p class="hero-date">10 · Ottobre · 2026</p>
+  <p class="hero-tagline">
+    Si sposano! Dopo anni di avventure condivise, hanno scelto l'autunno per celebrare il loro amore — tra foglie dorate, profumo di bosco e le persone che amano di più.
+  </p>
+  <div class="hero-countdown">
+    <div class="hero-countdown-item">
+      <span class="hero-countdown-num" id="cd-giorni">—</span>
+      <span class="hero-countdown-label">Giorni</span>
+    </div>
+    <span class="hero-countdown-sep">·</span>
+    <div class="hero-countdown-item">
+      <span class="hero-countdown-num" id="cd-ore">—</span>
+      <span class="hero-countdown-label">Ore</span>
+    </div>
+    <span class="hero-countdown-sep">·</span>
+    <div class="hero-countdown-item">
+      <span class="hero-countdown-num" id="cd-minuti">—</span>
+      <span class="hero-countdown-label">Minuti</span>
+    </div>
+    <span class="hero-countdown-sep">·</span>
+    <div class="hero-countdown-item">
+      <span class="hero-countdown-num" id="cd-secondi">—</span>
+      <span class="hero-countdown-label">Secondi</span>
+    </div>
+  </div>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- DETTAGLI -->
+<section id="dettagli">
+  <div class="section-inner">
+    <h2 class="section-title reveal">I dettagli della giornata</h2>
+    <p class="section-text reveal">Una giornata pensata con cura, dall'inizio alla fine. Segna tutto sul calendario!</p>
+    <div class="details-grid reveal">
+      <div class="detail-card card-cerimonia">
+        <span class="detail-icon">⛪</span>
+        <div class="detail-type">Cerimonia</div>
+        <div class="detail-name">Chiesa di San Michele</div>
+        <div class="detail-info">
+          <strong>Colle di Sant'Alfonso</strong><br>
+          Torre del Greco<br>
+          10 Ottobre 2026 · ore 11:00
+        </div>
+        <a href="https://maps.app.goo.gl/9Pcjrx1r3tSvqGSH8" target="_blank" class="detail-link-maps">Apri in Maps →</a>
+      </div>
+      <div class="detail-card card-ricevimento">
+        <span class="detail-icon">🍽</span>
+        <div class="detail-type">Ricevimento</div>
+        <div class="detail-name">Villa Balke</div>
+        <div class="detail-info">
+          <strong>Via Prota 42</strong><br>
+          Torre del Greco<br>
+          A seguire la cerimonia
+        </div>
+        <a href="https://maps.app.goo.gl/y6zysQvcrCheAv5q6" target="_blank" class="detail-link-maps">Apri in Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGALO -->
+<section id="regalo">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Un viaggio da sognare</h2>
+    <p class="section-text reveal">
+      Il dono più bello che potete farci è contribuire al nostro viaggio di nozze. Ogni pensiero, grande o piccolo, ci porterà un po' più lontano — insieme.
+    </p>
+    <div class="regalo-box reveal">
+      <p style="font-size:0.95rem; font-weight:300; color:var(--text-muted); line-height:1.8; margin-bottom:0.5rem;">
+        Se desiderate partecipare al nostro viaggio di nozze, potete lasciarci un pensiero con le coordinate qui sotto. La causale suggerita è: <em>"Regalo matrimonio"</em>.
+      </p>
+      <div class="iban-block">
+        <div>
+          <div class="iban-label">IBAN</div>
+          <div class="iban-number" id="iban-text">IT85 H030 6939 6931 0000 0002 733</div>
+        </div>
+        <button class="copy-btn" onclick="copyIban()">Copia</button>
+      </div>
+      <div style="font-size:0.82rem; color:var(--text-muted); margin-bottom:1rem;">
+        <strong style="color:var(--text-dark);">Intestatario:</strong> Augusto Petrellese &nbsp;·&nbsp;
+        <strong style="color:var(--text-dark);">Causale:</strong> Regalo matrimonio
+      </div>
+      <div class="regalo-note">
+        Non vi sentite a vostro agio con questo tipo di pensiero? Nessun problema — la vostra presenza al nostro fianco è già il regalo più grande. Siete i benvenuti così come siete. 🌿
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Ci sarai?</h2>
+    <p class="section-text reveal">
+      Vi chiediamo di confermare la presenza entro il <strong>30 giugno 2026</strong>, così possiamo organizzarci al meglio.
+    </p>
+    <div id="rsvp-form-wrap">
+      <form class="rsvp-form reveal" id="rsvp-form" onsubmit="submitRsvp(event)">
+
+        <div class="form-group">
+          <label class="form-label">Nome *</label>
+          <input type="text" id="rsvp-nome" class="form-input" placeholder="Il tuo nome" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Cognome *</label>
+          <input type="text" id="rsvp-cognome" class="form-input" placeholder="Il tuo cognome" required>
+        </div>
+        <div class="form-group full">
+          <label class="form-label">Email</label>
+          <input type="email" id="rsvp-email" class="form-input" placeholder="tua@email.com">
+        </div>
+
+        <!-- Presenze -->
+        <div class="form-group full">
+          <label class="form-label">Presenze *</label>
+          <input type="hidden" id="input-viene" value="">
+          <div class="presenze-group">
+            <button type="button" class="presenze-btn" id="btn-viene">🥂 Parteciperò!</button>
+            <button type="button" class="presenze-btn" id="btn-non-viene">😢 Purtroppo non riesco a esserci</button>
+          </div>
+
+          <div class="presenze-num-wrap" id="presenze-num-wrap">
+            <div style="display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap;">
+              <label>Adulti</label>
+              <input type="number" id="rsvp-adulti" class="num-input" min="0" max="20" value="1">
+              <label style="margin-left:1rem;">Bambini</label>
+              <input type="number" id="rsvp-bambini" class="num-input" min="0" max="20" value="0">
+            </div>
+          </div>
+        </div>
+
+        <!-- Dettaglio per persona -->
+        <div class="form-group full persone-section" id="persone-section">
+          <label class="form-label">Dettaglio partecipanti</label>
+          <p class="persone-hint">Inserisci il nome (opzionale) e indica eventuali esigenze alimentari per ciascun partecipante.</p>
+          <div id="persone-rows"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Conferma →</button>
+      </form>
+
+      <div class="form-success reveal" id="form-success">
+        <div class="form-success-icon">🌿</div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; font-style:italic; color:var(--green-deep); margin-bottom:0.8rem;">Grazie mille!</h3>
+        <p>La tua conferma è arrivata. Non vediamo l'ora di festeggiare con te il 10 ottobre!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO -->
+<section id="foto">
+  <div class="section-inner">
+    <span class="section-eyebrow reveal">I ricordi del giorno</span>
+    <h2 class="section-title reveal">Condividi le tue foto</h2>
+    <p class="section-text reveal">
+      Vogliamo vedere il nostro matrimonio anche attraverso i vostri occhi. Caricate le vostre foto nell'album condiviso — diventeranno parte della nostra storia.
+    </p>
+    <div class="foto-steps">
+      <div class="foto-step reveal">
+        <div class="foto-step-num">01</div>
+        <div class="foto-step-title">Apri il link</div>
+        <div class="foto-step-desc">Clicca sul pulsante qui sotto per accedere all'album Google Foto condiviso. Non serve un account, basta il link!</div>
+      </div>
+      <div class="foto-step reveal">
+        <div class="foto-step-num">02</div>
+        <div class="foto-step-title">Carica le foto</div>
+        <div class="foto-step-desc">Clicca sull'icona di caricamento e seleziona le foto dal tuo telefono o computer.</div>
+      </div>
+      <div class="foto-step reveal">
+        <div class="foto-step-num">03</div>
+        <div class="foto-step-title">Ammira il risultato</div>
+        <div class="foto-step-desc">Vedrai subito le foto di tutti gli ospiti. Un album collettivo che crescerà giorno dopo giorno.</div>
+      </div>
+    </div>
+    <a href="https://photos.app.goo.gl/eZibtUzA54u1Y8Yx8" target="_blank" class="foto-cta reveal">📷 &nbsp;Apri l'album condiviso</a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-names">Mariapia & Augusto</div>
+  <p class="footer-sub">10 · Ottobre · 2026 &nbsp;·&nbsp; Con tutto il nostro amore</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
