@@ -198,13 +198,13 @@ import { db, auth, collection, getDocs, serverTimestamp,
   from './firebase.js';
 
 // ── UID autorizzato — sostituisci dopo il primo login ──
-const AUTHORIZED_UID = 'G4iFBuAYLdXc6tVYsAtluErdpsY2';
+const AUTHORIZED_UID = ['G4iFBuAYLdXc6tVYsAtluErdpsY2', 'xc5neOC3sadnTcqH9rex0KGzq4u2'];
 
 let rsvpData = [];
 
 /* AUTH */
 onAuthStateChanged(auth, user => {
-  if (user && (user.uid === AUTHORIZED_UID || AUTHORIZED_UID === 'G4iFBuAYLdXc6tVYsAtluErdpsY2')) {
+  if (user && (AUTHORIZED_UIDS.includes(user.uid) || AUTHORIZED_UID === 'G4iFBuAYLdXc6tVYsAtluErdpsY2')) {
     // Mostra UID in console per copiarlo la prima volta
     console.log('Il tuo UID è:', user.uid);
     document.getElementById('login-screen').style.display = 'none';
