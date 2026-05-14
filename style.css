@@ -64,6 +64,15 @@ nav ul a:hover { color: var(--green-deep); }
 }
 #hero > * { position: relative; z-index: 1; }
 
+/* ── HERO MOBILE ── */
+@media (max-width: 768px) {
+  #hero {
+    background-image: url('hero-mobile.jpeg');
+    background-position: left center;
+    background-size: cover;
+  }
+}
+
 .hero-label {
   font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--copper-light); margin-bottom: 1.8rem;
