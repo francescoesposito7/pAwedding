@@ -34,6 +34,7 @@ nav {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem; font-weight: 300; font-style: italic;
   color: var(--green-deep); letter-spacing: 0.05em;
+  text-decoration: none; cursor: pointer;
 }
 nav ul { list-style: none; display: flex; gap: 2.5rem; }
 nav ul a {
